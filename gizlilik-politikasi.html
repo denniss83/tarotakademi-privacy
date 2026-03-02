@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gizlilik Politikası — Tarot Akademi</title>
+  <title>Privacy Policy — Tarot Akademi</title>
+  <meta name="description" content="Privacy Policy for Tarot Akademi mobile application.">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -25,133 +26,299 @@
     a { color: #D4AF37; text-decoration: underline; }
     a:hover { color: #f0d070; }
     footer { margin-top: 48px; text-align: center; color: #606080; font-size: 0.85rem; border-top: 1px solid #2a2a4a; padding-top: 20px; }
+    .lang-switcher { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 16px; }
+    .lang-switcher button {
+      background: transparent;
+      color: #D4AF37;
+      border: 1px solid #D4AF37;
+      border-radius: 4px;
+      padding: 4px 12px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .lang-switcher button:hover { background: #D4AF3722; }
+    .lang-switcher button.active { background: #D4AF37; color: #0a0a1a; font-weight: bold; }
   </style>
 </head>
 <body>
 <div class="container">
-  <header>
-    <h1>Gizlilik Politikası</h1>
-    <p>Tarot Akademi | Son güncellenme: 1 Ocak 2025</p>
-  </header>
+  <div class="lang-switcher">
+    <button id="btn-en" class="active" aria-pressed="true" aria-label="Switch to English" onclick="switchLang('en')">EN</button>
+    <button id="btn-tr" aria-pressed="false" aria-label="Türkçeye geç" onclick="switchLang('tr')">TR</button>
+  </div>
 
-  <h2>1. Giriş</h2>
-  <p>
-    Bu Gizlilik Politikası, <strong>Tarot Akademi</strong> mobil uygulamasının ("Uygulama") geliştiricisi ve işletmecisi olan
-    <strong>Tarot Akademi</strong> tarafından hazırlanmıştır. Uygulamayı indiren, kaydolan veya herhangi bir şekilde kullanan
-    kişilerin ("Kullanıcı") kişisel verilerinin nasıl toplandığını, işlendiğini, saklandığını ve korunduğunu açıklamaktadır.
-  </p>
-  <p>
-    Bu politika; 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), ilgili yönetmelikler ve uluslararası gizlilik
-    standartları çerçevesinde hazırlanmıştır. Uygulamayı kullanarak bu politikada belirtilen koşulları kabul etmiş olursunuz.
-  </p>
+  <!-- English Content -->
+  <div class="lang-en" aria-hidden="false">
+    <header>
+      <h1>Privacy Policy</h1>
+      <p>Tarot Akademi | Last updated: January 1, 2025</p>
+    </header>
 
-  <h2>2. Toplanan Veriler</h2>
-  <p>Uygulama, aşağıdaki kişisel ve teknik verileri toplayabilir:</p>
-  <ul>
-    <li><strong>Hesap Bilgileri:</strong> Kayıt sırasında girilen e-posta adresi ve kullanıcı adı (Firebase Authentication aracılığıyla).</li>
-    <li><strong>Anonim Kullanıcı Kimliği:</strong> E-posta ile kayıt yapmayan kullanıcılara Firebase tarafından atanan anonim UID.</li>
-    <li><strong>Satın Alma Bilgileri:</strong> Uygulama içi satın alma işlemlerine ait IAP token bilgisi ve ürün tanımlayıcısı (Google Firestore'da işlenmektedir). Ödeme kart veya banka bilgileri hiçbir şekilde tarafımızca toplanmamaktadır.</li>
-    <li><strong>Kullanım Verileri:</strong> Yapılan tarot açılımları, yıldız tozu bakiyesi ve uygulama içi etkileşim bilgileri.</li>
-    <li><strong>Reklam Tanımlayıcısı:</strong> Google AdMob tarafından kullanılan cihaz reklam tanımlayıcısı (Android'de GAID, iOS'te IDFA). Bu tanımlayıcı yalnızca kişiselleştirilmiş reklam gösterimi amacıyla kullanılmakta olup kullanıcı tarafından sıfırlanabilir veya devre dışı bırakılabilir.</li>
-    <li><strong>Cihaz ve Sistem Bilgisi:</strong> İşletim sistemi versiyonu, cihaz dili, uygulama sürümü. Bu bilgiler hata analizi (crash reporting) ve uygulama iyileştirme amacıyla kullanılmaktadır.</li>
-    <li><strong>Yerel Önbellek:</strong> Uygulama performansını artırmak amacıyla bazı veriler cihazınızda SharedPreferences aracılığıyla yerel olarak saklanabilir. Bu veriler sunucularımıza iletilmez.</li>
-  </ul>
+    <h2>1. Introduction</h2>
+    <p>
+      This Privacy Policy has been prepared by <strong>Tarot Akademi</strong>, the developer and operator of the
+      <strong>Tarot Akademi</strong> mobile application ("Application"). It explains how personal data of individuals
+      ("User") who download, register, or use the Application in any way is collected, processed, stored, and protected.
+    </p>
+    <p>
+      This policy has been prepared in accordance with applicable international privacy standards and regulations.
+      By using the Application, you agree to the terms set forth in this policy.
+    </p>
 
-  <h2>3. Verilerin Kullanım Amacı</h2>
-  <p>KVKK'nın 5. maddesi uyarınca toplanan veriler yalnızca aşağıdaki amaçlarla işlenmektedir:</p>
-  <ul>
-    <li>Kullanıcı hesabının oluşturulması ve kimlik doğrulaması,</li>
-    <li>Satın alınan ürün ve aboneliklerin aktive edilmesi ve yönetilmesi,</li>
-    <li>Uygulama özelliklerinin (tarot açılımı, astroloji araçları, spiritüel içerikler) sunulması,</li>
-    <li>Uygulama içi reklamların gösterilmesi (AdMob aracılığıyla),</li>
-    <li>Teknik hataların tespiti, iyileştirilmesi ve uygulama kalitesinin artırılması,</li>
-    <li>Kullanıcı destek taleplerinin karşılanması,</li>
-    <li>Yasal yükümlülüklerin yerine getirilmesi.</li>
-  </ul>
-  <p>Verileriniz; açık rızanız, sözleşmenin ifası ve meşru menfaat hukuki dayanaklarından biri kapsamında işlenmektedir.</p>
+    <h2>2. Data Collected</h2>
+    <p>The Application may collect the following personal and technical data:</p>
+    <ul>
+      <li><strong>Account Information:</strong> Email address and username entered during registration (via Firebase Authentication).</li>
+      <li><strong>Anonymous User ID:</strong> Anonymous UID assigned by Firebase to users who do not register with email.</li>
+      <li><strong>Purchase Information:</strong> IAP token and product identifier for in-app purchases (processed in Google Firestore). Payment card or bank information is never collected by us.</li>
+      <li><strong>Usage Data:</strong> Tarot readings performed, star dust balance, and in-app interaction data.</li>
+      <li><strong>Advertising Identifier:</strong> Device advertising identifier used by Google AdMob (GAID on Android, IDFA on iOS). This identifier is used solely for personalized ad delivery and can be reset or disabled by the user.</li>
+      <li><strong>Device &amp; System Information:</strong> OS version, device language, app version. Used for crash reporting and app improvement.</li>
+      <li><strong>Local Cache:</strong> Some data may be stored locally on your device via SharedPreferences to improve performance. This data is not transmitted to our servers.</li>
+    </ul>
 
-  <h2>4. Verilerin Paylaşımı</h2>
-  <p>
-    Kişisel verileriniz; yalnızca Uygulamanın işletilmesi için zorunlu olan teknik hizmet sağlayıcılarla paylaşılmakta
-    olup bu paylaşım aşağıdaki kanallarla sınırlıdır:
-  </p>
-  <ul>
-    <li><strong>Google Firebase (Firebase Authentication, Firestore):</strong> Kullanıcı kimlik doğrulama ve veri depolama hizmetleri için. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Gizlilik Politikası</a></li>
-    <li><strong>Google AdMob:</strong> Reklam gösterimi için. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Gizlilik Politikası</a></li>
-    <li><strong>Apple App Store / Google Play:</strong> Uygulama içi satın alma işlemleri için. Ödeme ve iade işlemleri ilgili mağazanın politikaları çerçevesinde gerçekleşir.</li>
-  </ul>
-  <p>
-    Bu üçüncü tarafların dışında herhangi bir kişi, kurum veya kuruluşla kişisel verileriniz paylaşılmamaktadır.
-    Verileriniz hiçbir şekilde satılmamakta, kiralanmamakta veya ticari amaçla devredilmemektedir.
-  </p>
+    <h2>3. Purpose of Data Use</h2>
+    <p>Collected data is processed only for the following purposes:</p>
+    <ul>
+      <li>Creating user accounts and authentication,</li>
+      <li>Activating and managing purchased products and subscriptions,</li>
+      <li>Providing app features (tarot readings, astrology tools, spiritual content),</li>
+      <li>Displaying in-app ads (via AdMob),</li>
+      <li>Detecting and fixing technical errors and improving app quality,</li>
+      <li>Handling user support requests,</li>
+      <li>Fulfilling legal obligations.</li>
+    </ul>
+    <p>Your data is processed under one of the following legal bases: your explicit consent, performance of a contract, or legitimate interest.</p>
 
-  <h2>5. Veri Saklama Süresi</h2>
-  <p>
-    Kişisel verileriniz; hesabınız aktif olduğu süre boyunca veya hizmetlerimizi kullanmaya devam ettiğiniz sürece
-    saklanmaktadır. Hesabınızı silmeniz ya da verilerinizin silinmesini talep etmeniz halinde, yasal saklama
-    yükümlülükleri kapsamındaki istisnalar dışında, verileriniz en geç 30 gün içinde sistemlerimizden kalıcı olarak
-    silinmektedir.
-  </p>
-  <p>
-    Satın alma kayıtları, vergi ve muhasebe mevzuatı uyarınca yasal saklama süreleri boyunca muhafaza edilebilir.
-  </p>
+    <h2>4. Data Sharing</h2>
+    <p>
+      Your personal data is shared only with technical service providers necessary for operating the Application,
+      limited to:
+    </p>
+    <ul>
+      <li><strong>Google Firebase (Firebase Authentication, Firestore):</strong> For user authentication and data storage. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Privacy Policy</a></li>
+      <li><strong>Google AdMob:</strong> For ad delivery. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></li>
+      <li><strong>Apple App Store / Google Play:</strong> For in-app purchases. Payment and refund processes are governed by the respective store's policies.</li>
+    </ul>
+    <p>
+      Your personal data is not shared with any other person, institution, or organization.
+      Your data is never sold, rented, or transferred for commercial purposes.
+    </p>
 
-  <h2>6. Kullanıcı Hakları (KVKK Madde 11)</h2>
-  <p>KVKK'nın 11. maddesi uyarınca kişisel verileriniz üzerinde aşağıdaki haklara sahipsiniz:</p>
-  <ul>
-    <li><strong>Erişim:</strong> Kişisel verilerinizin işlenip işlenmediğini öğrenme ve işlenmişse buna ilişkin bilgi talep etme,</li>
-    <li><strong>Düzeltme:</strong> Yanlış veya eksik verilerinizin düzeltilmesini talep etme,</li>
-    <li><strong>Silme:</strong> KVKK'da öngörülen koşulların varlığı halinde kişisel verilerinizin silinmesini talep etme,</li>
-    <li><strong>Aktarım:</strong> Verilerinizin üçüncü kişilere aktarıldığı durumlarda bu aktarımın bildirilmesini talep etme,</li>
-    <li><strong>İtiraz:</strong> İşlenen verilerinizin münhasıran otomatik sistemler aracılığıyla analiz edilmesi suretiyle aleyhinize bir sonuç doğurmasına itiraz etme,</li>
-    <li><strong>Tazminat:</strong> Kanuna aykırı işleme nedeniyle uğradığınız zararın giderilmesini talep etme.</li>
-  </ul>
-  <p>
-    Bu haklarınızı kullanmak için <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a> adresine
-    e-posta gönderebilirsiniz. Talepleriniz en geç 30 gün içinde yanıtlanacaktır.
-  </p>
+    <h2>5. Data Retention</h2>
+    <p>
+      Your personal data is retained for as long as your account is active or you continue to use our services.
+      If you delete your account or request deletion of your data, your data will be permanently removed from our
+      systems within 30 days, except where retention is required by law.
+    </p>
+    <p>
+      Purchase records may be retained for legally required periods under tax and accounting regulations.
+    </p>
 
-  <h2>7. Çocukların Gizliliği</h2>
-  <p>
-    Tarot Akademi, 13 yaşın altındaki bireylere yönelik değildir. Uygulama; spiritüel eğlence ve kişisel gelişim içerikleri
-    sunmakta olup 13 yaşın altındaki kullanıcıların kaydını veya uygulama kullanımını kasıtlı olarak desteklememektedir.
-    Ebeveyn ya da vasilerin, çocuklarının bu tür verileri sağladığından haberdar olmaları durumunda
-    <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a> adresi üzerinden bizimle iletişime
-    geçmelerini rica ederiz; ilgili veriler derhal silinecektir.
-  </p>
+    <h2>6. User Rights</h2>
+    <p>You have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access:</strong> The right to learn whether your personal data is being processed and to request information if so,</li>
+      <li><strong>Rectification:</strong> The right to request correction of inaccurate or incomplete data,</li>
+      <li><strong>Erasure:</strong> The right to request deletion of your personal data under applicable conditions,</li>
+      <li><strong>Portability:</strong> The right to be informed when your data is transferred to third parties,</li>
+      <li><strong>Objection:</strong> The right to object to outcomes based solely on automated processing of your data,</li>
+      <li><strong>Compensation:</strong> The right to request compensation for damages resulting from unlawful processing.</li>
+    </ul>
+    <p>
+      To exercise these rights, please email <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a>.
+      Requests will be responded to within 30 days.
+    </p>
 
-  <h2>8. Çerezler ve Üçüncü Taraf SDK'lar</h2>
-  <p>
-    Uygulama, yerel önbellekleme için cihaz üzerinde veri saklayabilir. Ayrıca aşağıdaki üçüncü taraf SDK'lar
-    entegre edilmiştir; bu SDK'ların kendi gizlilik politikaları geçerlidir:
-  </p>
-  <ul>
-    <li><strong>Firebase SDK:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
-    <li><strong>Google AdMob SDK:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
-    <li><strong>Apple StoreKit / Google Play Billing:</strong> İlgili mağazanın gizlilik politikası uygulanır.</li>
-  </ul>
+    <h2>7. Children's Privacy</h2>
+    <p>
+      Tarot Akademi is not directed at individuals under 13 years of age. If parents or guardians become aware that
+      their child has provided such data, please contact us at
+      <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a>; the relevant data will be deleted immediately.
+    </p>
 
-  <h2>9. Politika Değişiklikleri</h2>
-  <p>
-    Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama içinde bildirim veya bu sayfa
-    üzerinden duyurulacaktır. Güncellenmiş politikanın yayınlanmasının ardından Uygulamayı kullanmaya devam etmeniz,
-    değişiklikleri kabul ettiğiniz anlamına gelir. Politikayı düzenli olarak incelemenizi öneririz.
-  </p>
+    <h2>8. Cookies and Third-Party SDKs</h2>
+    <p>
+      The Application may store data locally on the device for caching. The following third-party SDKs are integrated:
+    </p>
+    <ul>
+      <li><strong>Firebase SDK:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
+      <li><strong>Google AdMob SDK:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+      <li><strong>Apple StoreKit / Google Play Billing:</strong> Respective store's privacy policy applies.</li>
+    </ul>
 
-  <h2>10. İletişim</h2>
-  <p>
-    Bu politikayla ilgili her türlü soru, talep veya geri bildirim için:
-  </p>
-  <ul>
-    <li><strong>E-posta:</strong> <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a></li>
-  </ul>
-  <p>
-    Ayrıca <a href="kullanim-kosullari.html">Kullanım Koşulları</a> sayfamızı da incelemenizi tavsiye ederiz.
-  </p>
+    <h2>9. Policy Changes</h2>
+    <p>
+      This Privacy Policy may be updated from time to time. Significant changes will be announced within the app or
+      on this page. Continued use of the Application after the updated policy is published constitutes acceptance
+      of the changes.
+    </p>
 
-  <footer>
-    <p>&copy; 2025 Tarot Akademi. Tüm hakları saklıdır.</p>
-  </footer>
+    <h2>10. Contact</h2>
+    <p>For any questions, requests, or feedback regarding this policy:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a></li>
+    </ul>
+    <p>
+      We also recommend reviewing our <a href="kullanim-kosullari.html">Terms of Use</a> page.
+    </p>
+
+    <footer>
+      <p>&copy; 2025 Tarot Akademi. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Turkish Content -->
+  <div class="lang-tr" style="display:none" aria-hidden="true">
+    <header>
+      <h1>Gizlilik Politikası</h1>
+      <p>Tarot Akademi | Son güncellenme: 1 Ocak 2025</p>
+    </header>
+
+    <h2>1. Giriş</h2>
+    <p>
+      Bu Gizlilik Politikası, <strong>Tarot Akademi</strong> mobil uygulamasının ("Uygulama") geliştiricisi ve işletmecisi olan
+      <strong>Tarot Akademi</strong> tarafından hazırlanmıştır. Uygulamayı indiren, kaydolan veya herhangi bir şekilde kullanan
+      kişilerin ("Kullanıcı") kişisel verilerinin nasıl toplandığını, işlendiğini, saklandığını ve korunduğunu açıklamaktadır.
+    </p>
+    <p>
+      Bu politika; 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK), ilgili yönetmelikler ve uluslararası gizlilik
+      standartları çerçevesinde hazırlanmıştır. Uygulamayı kullanarak bu politikada belirtilen koşulları kabul etmiş olursunuz.
+    </p>
+
+    <h2>2. Toplanan Veriler</h2>
+    <p>Uygulama, aşağıdaki kişisel ve teknik verileri toplayabilir:</p>
+    <ul>
+      <li><strong>Hesap Bilgileri:</strong> Kayıt sırasında girilen e-posta adresi ve kullanıcı adı (Firebase Authentication aracılığıyla).</li>
+      <li><strong>Anonim Kullanıcı Kimliği:</strong> E-posta ile kayıt yapmayan kullanıcılara Firebase tarafından atanan anonim UID.</li>
+      <li><strong>Satın Alma Bilgileri:</strong> Uygulama içi satın alma işlemlerine ait IAP token bilgisi ve ürün tanımlayıcısı (Google Firestore'da işlenmektedir). Ödeme kart veya banka bilgileri hiçbir şekilde tarafımızca toplanmamaktadır.</li>
+      <li><strong>Kullanım Verileri:</strong> Yapılan tarot açılımları, yıldız tozu bakiyesi ve uygulama içi etkileşim bilgileri.</li>
+      <li><strong>Reklam Tanımlayıcısı:</strong> Google AdMob tarafından kullanılan cihaz reklam tanımlayıcısı (Android'de GAID, iOS'te IDFA). Bu tanımlayıcı yalnızca kişiselleştirilmiş reklam gösterimi amacıyla kullanılmakta olup kullanıcı tarafından sıfırlanabilir veya devre dışı bırakılabilir.</li>
+      <li><strong>Cihaz ve Sistem Bilgisi:</strong> İşletim sistemi versiyonu, cihaz dili, uygulama sürümü. Bu bilgiler hata analizi (crash reporting) ve uygulama iyileştirme amacıyla kullanılmaktadır.</li>
+      <li><strong>Yerel Önbellek:</strong> Uygulama performansını artırmak amacıyla bazı veriler cihazınızda SharedPreferences aracılığıyla yerel olarak saklanabilir. Bu veriler sunucularımıza iletilmez.</li>
+    </ul>
+
+    <h2>3. Verilerin Kullanım Amacı</h2>
+    <p>KVKK'nın 5. maddesi uyarınca toplanan veriler yalnızca aşağıdaki amaçlarla işlenmektedir:</p>
+    <ul>
+      <li>Kullanıcı hesabının oluşturulması ve kimlik doğrulaması,</li>
+      <li>Satın alınan ürün ve aboneliklerin aktive edilmesi ve yönetilmesi,</li>
+      <li>Uygulama özelliklerinin (tarot açılımı, astroloji araçları, spiritüel içerikler) sunulması,</li>
+      <li>Uygulama içi reklamların gösterilmesi (AdMob aracılığıyla),</li>
+      <li>Teknik hataların tespiti, iyileştirilmesi ve uygulama kalitesinin artırılması,</li>
+      <li>Kullanıcı destek taleplerinin karşılanması,</li>
+      <li>Yasal yükümlülüklerin yerine getirilmesi.</li>
+    </ul>
+    <p>Verileriniz; açık rızanız, sözleşmenin ifası ve meşru menfaat hukuki dayanaklarından biri kapsamında işlenmektedir.</p>
+
+    <h2>4. Verilerin Paylaşımı</h2>
+    <p>
+      Kişisel verileriniz; yalnızca Uygulamanın işletilmesi için zorunlu olan teknik hizmet sağlayıcılarla paylaşılmakta
+      olup bu paylaşım aşağıdaki kanallarla sınırlıdır:
+    </p>
+    <ul>
+      <li><strong>Google Firebase (Firebase Authentication, Firestore):</strong> Kullanıcı kimlik doğrulama ve veri depolama hizmetleri için. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase Gizlilik Politikası</a></li>
+      <li><strong>Google AdMob:</strong> Reklam gösterimi için. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Gizlilik Politikası</a></li>
+      <li><strong>Apple App Store / Google Play:</strong> Uygulama içi satın alma işlemleri için. Ödeme ve iade işlemleri ilgili mağazanın politikaları çerçevesinde gerçekleşir.</li>
+    </ul>
+    <p>
+      Bu üçüncü tarafların dışında herhangi bir kişi, kurum veya kuruluşla kişisel verileriniz paylaşılmamaktadır.
+      Verileriniz hiçbir şekilde satılmamakta, kiralanmamakta veya ticari amaçla devredilmemektedir.
+    </p>
+
+    <h2>5. Veri Saklama Süresi</h2>
+    <p>
+      Kişisel verileriniz; hesabınız aktif olduğu süre boyunca veya hizmetlerimizi kullanmaya devam ettiğiniz sürece
+      saklanmaktadır. Hesabınızı silmeniz ya da verilerinizin silinmesini talep etmeniz halinde, yasal saklama
+      yükümlülükleri kapsamındaki istisnalar dışında, verileriniz en geç 30 gün içinde sistemlerimizden kalıcı olarak
+      silinmektedir.
+    </p>
+    <p>
+      Satın alma kayıtları, vergi ve muhasebe mevzuatı uyarınca yasal saklama süreleri boyunca muhafaza edilebilir.
+    </p>
+
+    <h2>6. Kullanıcı Hakları (KVKK Madde 11)</h2>
+    <p>KVKK'nın 11. maddesi uyarınca kişisel verileriniz üzerinde aşağıdaki haklara sahipsiniz:</p>
+    <ul>
+      <li><strong>Erişim:</strong> Kişisel verilerinizin işlenip işlenmediğini öğrenme ve işlenmişse buna ilişkin bilgi talep etme,</li>
+      <li><strong>Düzeltme:</strong> Yanlış veya eksik verilerinizin düzeltilmesini talep etme,</li>
+      <li><strong>Silme:</strong> KVKK'da öngörülen koşulların varlığı halinde kişisel verilerinizin silinmesini talep etme,</li>
+      <li><strong>Aktarım:</strong> Verilerinizin üçüncü kişilere aktarıldığı durumlarda bu aktarımın bildirilmesini talep etme,</li>
+      <li><strong>İtiraz:</strong> İşlenen verilerinizin münhasıran otomatik sistemler aracılığıyla analiz edilmesi suretiyle aleyhinize bir sonuç doğurmasına itiraz etme,</li>
+      <li><strong>Tazminat:</strong> Kanuna aykırı işleme nedeniyle uğradığınız zararın giderilmesini talep etme.</li>
+    </ul>
+    <p>
+      Bu haklarınızı kullanmak için <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a> adresine
+      e-posta gönderebilirsiniz. Talepleriniz en geç 30 gün içinde yanıtlanacaktır.
+    </p>
+
+    <h2>7. Çocukların Gizliliği</h2>
+    <p>
+      Tarot Akademi, 13 yaşın altındaki bireylere yönelik değildir. Uygulama; spiritüel eğlence ve kişisel gelişim içerikleri
+      sunmakta olup 13 yaşın altındaki kullanıcıların kaydını veya uygulama kullanımını kasıtlı olarak desteklememektedir.
+      Ebeveyn ya da vasilerin, çocuklarının bu tür verileri sağladığından haberdar olmaları durumunda
+      <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a> adresi üzerinden bizimle iletişime
+      geçmelerini rica ederiz; ilgili veriler derhal silinecektir.
+    </p>
+
+    <h2>8. Çerezler ve Üçüncü Taraf SDK'lar</h2>
+    <p>
+      Uygulama, yerel önbellekleme için cihaz üzerinde veri saklayabilir. Ayrıca aşağıdaki üçüncü taraf SDK'lar
+      entegre edilmiştir; bu SDK'ların kendi gizlilik politikaları geçerlidir:
+    </p>
+    <ul>
+      <li><strong>Firebase SDK:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
+      <li><strong>Google AdMob SDK:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+      <li><strong>Apple StoreKit / Google Play Billing:</strong> İlgili mağazanın gizlilik politikası uygulanır.</li>
+    </ul>
+
+    <h2>9. Politika Değişiklikleri</h2>
+    <p>
+      Bu Gizlilik Politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama içinde bildirim veya bu sayfa
+      üzerinden duyurulacaktır. Güncellenmiş politikanın yayınlanmasının ardından Uygulamayı kullanmaya devam etmeniz,
+      değişiklikleri kabul ettiğiniz anlamına gelir. Politikayı düzenli olarak incelemenizi öneririz.
+    </p>
+
+    <h2>10. İletişim</h2>
+    <p>
+      Bu politikayla ilgili her türlü soru, talep veya geri bildirim için:
+    </p>
+    <ul>
+      <li><strong>E-posta:</strong> <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a></li>
+    </ul>
+    <p>
+      Ayrıca <a href="kullanim-kosullari.html">Kullanım Koşulları</a> sayfamızı da incelemenizi tavsiye ederiz.
+    </p>
+
+    <footer>
+      <p>&copy; 2025 Tarot Akademi. Tüm hakları saklıdır.</p>
+    </footer>
+  </div>
 </div>
+<script>
+  function switchLang(lang) {
+    var metaDesc = document.querySelector('meta[name="description"]');
+    document.documentElement.lang = lang;
+    var enDiv = document.querySelector('.lang-en');
+    var trDiv = document.querySelector('.lang-tr');
+    var isEn = lang === 'en';
+    enDiv.style.display = isEn ? 'block' : 'none';
+    enDiv.setAttribute('aria-hidden', isEn ? 'false' : 'true');
+    trDiv.style.display = isEn ? 'none' : 'block';
+    trDiv.setAttribute('aria-hidden', isEn ? 'true' : 'false');
+    document.getElementById('btn-en').classList.toggle('active', isEn);
+    document.getElementById('btn-en').setAttribute('aria-pressed', isEn ? 'true' : 'false');
+    document.getElementById('btn-tr').classList.toggle('active', !isEn);
+    document.getElementById('btn-tr').setAttribute('aria-pressed', isEn ? 'false' : 'true');
+    if (isEn) {
+      document.title = 'Privacy Policy — Tarot Akademi';
+      metaDesc.content = 'Privacy Policy for Tarot Akademi mobile application.';
+    } else {
+      document.title = 'Gizlilik Politikası — Tarot Akademi';
+      metaDesc.content = 'Tarot Akademi mobil uygulaması Gizlilik Politikası.';
+    }
+  }
+</script>
 </body>
 </html>

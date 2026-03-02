@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kullanım Koşulları — Tarot Akademi</title>
+  <title>Terms of Use — Tarot Akademi</title>
+  <meta name="description" content="Terms of Use for Tarot Akademi mobile application.">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -34,156 +35,347 @@
     a { color: #D4AF37; text-decoration: underline; }
     a:hover { color: #f0d070; }
     footer { margin-top: 48px; text-align: center; color: #606080; font-size: 0.85rem; border-top: 1px solid #2a2a4a; padding-top: 20px; }
+    .lang-switcher { display: flex; justify-content: flex-end; gap: 8px; margin-bottom: 16px; }
+    .lang-switcher button {
+      background: transparent;
+      color: #D4AF37;
+      border: 1px solid #D4AF37;
+      border-radius: 4px;
+      padding: 4px 12px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .lang-switcher button:hover { background: #D4AF3722; }
+    .lang-switcher button.active { background: #D4AF37; color: #0a0a1a; font-weight: bold; }
   </style>
 </head>
 <body>
 <div class="container">
-  <header>
-    <h1>Kullanım Koşulları</h1>
-    <p>Tarot Akademi | Son güncellenme: 1 Ocak 2025</p>
-  </header>
-
-  <h2>1. Kabul</h2>
-  <p>
-    <strong>Tarot Akademi</strong> mobil uygulamasını ("Uygulama") App Store veya Google Play üzerinden indirerek,
-    kaydolarak veya herhangi bir şekilde kullanan her kişi ("Kullanıcı"), işbu Kullanım Koşullarını ("Koşullar")
-    okuduğunu, anladığını ve tüm hükümleriyle bağlı olmayı kabul ettiğini beyan eder.
-  </p>
-  <p>
-    Bu Koşulları kabul etmeyen kullanıcıların Uygulamayı indirmemesi, kullanmaması ve varsa hesabını kapatması
-    gerekmektedir. Uygulamayı kullanmaya devam etmek, Koşulların tümüyle kabul edildiği anlamına gelir.
-  </p>
-
-  <h2>2. Uygulamanın Niteliği ve Sorumluluk Reddi</h2>
-  <div class="highlight-box">
-    <p>
-      <strong>ÖNEMLİ UYARI:</strong> Tarot Akademi'nin sunduğu tüm içerikler — tarot açılımları, astroloji,
-      numeroloji, yıldız haritası, sinastri, karma bağı ve spiritüel rehberlik dahil olmak üzere — yalnızca
-      <strong>eğlence ve kişisel gelişim</strong> amacıyla sunulmaktadır.
-    </p>
-  </div>
-  <ul>
-    <li>Uygulama içeriğinin hiçbiri; tıbbi, psikolojik, hukuki, finansal veya herhangi bir mesleki tavsiye niteliği taşımaz. Bu tür konularda mutlaka yetkili uzmanlardan profesyonel destek alınmalıdır.</li>
-    <li>Yapay zeka tarafından üretilen veya algoritmik olarak oluşturulan içeriklerin kesinliği, doğruluğu ya da bütünlüğü hakkında herhangi bir garanti verilmemektedir. Kullanıcı, bu içeriklere dayanarak aldığı tüm kararların ve gerçekleştirdiği eylemlerin sorumluluğunu münferiden üstlenir.</li>
-    <li>Uygulama kullanımı sonucunda ortaya çıkan doğrudan veya dolaylı zarar, kayıp veya olumsuz sonuçlardan Tarot Akademi ve geliştiricileri hiçbir koşulda sorumlu tutulamaz.</li>
-    <li>Spiritüel içerikler birer yorum ve eğlence aracıdır; gelecek hakkında kehanet veya garanti niteliği taşımaz.</li>
-  </ul>
-
-  <h2>3. Ücretli İçerikler ve Satın Alma</h2>
-  <p>
-    Uygulama; <strong>"Yıldız Tozu"</strong> (tek kullanımlık dijital tüketim ürünü) ve <strong>Premium abonelik</strong>
-    olmak üzere iki farklı ücretli içerik türü sunmaktadır. Tüm satın alma işlemleri Apple App Store veya Google Play
-    altyapısı aracılığıyla gerçekleştirilmektedir.
-  </p>
-
-  <h3 style="color:#D4AF37; margin-top:20px; margin-bottom:8px; font-size:1rem;">3.1 Yıldız Tozu — Dijital Tüketim Ürünü ve Cayma Hakkının İstisnaları</h3>
-  <div class="highlight-box">
-    <p>
-      Yıldız Tozu, satın alma işleminin tamamlanmasıyla birlikte <strong>derhal kullanılabilir</strong> hale gelen
-      bir dijital tüketim ürünüdür. Bu nedenle:
-    </p>
-    <p>
-      6502 sayılı Tüketicinin Korunması Hakkında Kanun'un 48/5. maddesi ve Mesafeli Sözleşmeler Yönetmeliği'nin
-      15. maddesinin (ğ) bendi uyarınca; <strong>"dijital içeriğin ifasına başlanılmış olması"</strong> halinde
-      tüketicinin cayma hakkı sona ermektedir. Kullanıcı, satın alma işlemini onayladığı anda dijital içeriğin
-      ifasının başladığını ve bu nedenle cayma hakkını kullanamayacağını açıkça kabul eder.
-    </p>
-    <p>
-      Bu koşul, Kullanıcı tarafından satın alma ekranında ayrıca onaylanmaktadır; bu onay hukuki geçerlilik taşımaktadır.
-    </p>
+  <div class="lang-switcher">
+    <button id="btn-en" class="active" aria-pressed="true" aria-label="Switch to English" onclick="switchLang('en')">EN</button>
+    <button id="btn-tr" aria-pressed="false" aria-label="Türkçeye geç" onclick="switchLang('tr')">TR</button>
   </div>
 
-  <h3 style="color:#D4AF37; margin-top:20px; margin-bottom:8px; font-size:1rem;">3.2 Premium Abonelik</h3>
-  <ul>
-    <li>Premium abonelik, satın alma anından itibaren aktive edilir ve seçilen abonelik dönemi boyunca geçerlidir.</li>
-    <li>Abonelik süresi dolmadan iptal edilmesi halinde, kalan süreye karşılık gelen herhangi bir <strong>pro-rata iade yapılmaz</strong>; abonelik iptal tarihine kadar aktif kalmaya devam eder.</li>
-    <li>Otomatik yenileme özelliğini kapatmak için App Store veya Google Play hesap ayarlarının kullanılması gerekmektedir.</li>
-  </ul>
+  <!-- English Content -->
+  <div class="lang-en" aria-hidden="false">
+    <header>
+      <h1>Terms of Use</h1>
+      <p>Tarot Akademi | Last updated: January 1, 2025</p>
+    </header>
 
-  <h3 style="color:#D4AF37; margin-top:20px; margin-bottom:8px; font-size:1rem;">3.3 İade Talepleri</h3>
-  <ul>
-    <li>Satın alma işlemleri App Store (Apple) veya Google Play (Google) altyapısı üzerinden gerçekleştiğinden, iade talepleri yalnızca ilgili mağazanın iade politikaları çerçevesinde değerlendirilebilir.</li>
-    <li>Tarot Akademi'nin doğrudan iade yetkisi bulunmamaktadır. İade talepleriniz için Apple Destek veya Google Play Destek kanallarına başvurmanız gerekmektedir.</li>
-    <li>Kullanıcı, satın alma işlemini onayladığı anda işbu Koşulları ve iade politikasını kabul etmiş sayılır.</li>
-  </ul>
+    <h2>1. Acceptance</h2>
+    <p>
+      Any person ("User") who downloads, registers for, or uses the <strong>Tarot Akademi</strong> mobile application
+      ("Application") via the App Store or Google Play acknowledges that they have read, understood, and agree to be
+      bound by these Terms of Use ("Terms").
+    </p>
+    <p>
+      Users who do not accept these Terms must not download or use the Application and must close any existing account.
+      Continuing to use the Application constitutes full acceptance of the Terms.
+    </p>
 
-  <h2>4. Fikri Mülkiyet</h2>
-  <p>
-    Uygulamada yer alan tüm içerikler (tarot kartı görselleri, astroloji şemaları, yazılı metinler, tasarım öğeleri,
-    kullanıcı arayüzü ve kaynak kodu dahil) <strong>Tarot Akademi</strong>'ye ait olup Türk ve uluslararası fikri
-    mülkiyet mevzuatıyla korunmaktadır.
-  </p>
-  <p>
-    Kullanıcıların bu içerikleri Tarot Akademi'nin yazılı izni olmaksızın kopyalaması, çoğaltması, dağıtması,
-    yayımlaması veya ticari amaçla kullanması yasaktır.
-  </p>
+    <h2>2. Nature of Application and Disclaimer</h2>
+    <div class="highlight-box">
+      <p>
+        <strong>IMPORTANT NOTICE:</strong> All content provided by Tarot Akademi — including tarot readings, astrology,
+        numerology, birth charts, synastry, karmic connections, and spiritual guidance — is provided for
+        <strong>entertainment and personal development purposes only</strong>.
+      </p>
+    </div>
+    <ul>
+      <li>None of the Application's content constitutes medical, psychological, legal, financial, or any other professional advice. Please seek professional support from qualified experts for such matters.</li>
+      <li>No guarantee is made regarding the accuracy, correctness, or completeness of AI-generated or algorithmically created content. The User assumes sole responsibility for all decisions and actions taken based on such content.</li>
+      <li>Tarot Akademi and its developers are under no circumstances liable for any direct or indirect harm, loss, or adverse outcome arising from use of the Application.</li>
+      <li>Spiritual content is a tool for interpretation and entertainment; it does not constitute prophecy or guarantee regarding the future.</li>
+    </ul>
 
-  <h2>5. Hesap ve Güvenlik</h2>
-  <p>
-    Kullanıcı, hesap bilgilerinin (e-posta ve şifre) gizliliğini ve güvenliğini sağlamaktan münferiden sorumludur.
-    Hesap kimlik bilgilerinin yetkisiz üçüncü kişilerle paylaşılması yasaktır. Hesabınızın yetkisiz kullanımından
-    şüphelenmeniz halinde derhal <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a> adresine
-    bildirimde bulunmanız gerekmektedir.
-  </p>
-  <p>
-    Tarot Akademi; şifre unutma veya hesap güvenliği ihlalleri nedeniyle oluşabilecek veri kayıplarından sorumlu
-    tutulamaz.
-  </p>
+    <h2>3. Paid Content and Purchases</h2>
+    <p>
+      The Application offers two types of paid content: <strong>"Star Dust"</strong> (a single-use digital consumable)
+      and a <strong>Premium subscription</strong>. All purchases are made through Apple App Store or Google Play infrastructure.
+    </p>
 
-  <h2>6. Yasaklanan Kullanımlar</h2>
-  <p>Kullanıcı aşağıdaki eylemleri gerçekleştirmemeyi kabul eder:</p>
-  <ul>
-    <li>Uygulamayı veya kaynak kodunu tersine mühendislik (reverse engineering), decompile veya disassemble yoluyla inceleme,</li>
-    <li>Uygulama içeriğini ticari amaçla kopyalama, yeniden dağıtma veya satışa sunma,</li>
-    <li>Uygulamanın normal işleyişini bozacak ya da sunucularına zarar verecek eylemler gerçekleştirme (DDoS, spam, botlar vb.),</li>
-    <li>Başka kullanıcıların hesaplarına izinsiz erişim sağlama veya bu yönde girişimde bulunma,</li>
-    <li>Uygulamayı yürürlükteki herhangi bir yasayı ihlal eden amaçlarla kullanma.</li>
-  </ul>
-  <p>Bu yasaklara aykırı davranan kullanıcıların hesabı bildirim yapılmaksızın askıya alınabilir veya kalıcı olarak kapatılabilir.</p>
+    <h3 style="color:#D4AF37; margin-top:20px; margin-bottom:8px; font-size:1rem;">3.1 Star Dust — Digital Consumable and Withdrawal Right Exceptions</h3>
+    <div class="highlight-box">
+      <p>
+        Star Dust becomes <strong>immediately available</strong> upon completion of purchase. Therefore:
+      </p>
+      <p>
+        In accordance with applicable consumer protection regulations, once the performance of digital content has
+        commenced, the consumer's right of withdrawal expires. By confirming the purchase, the User explicitly
+        acknowledges that the performance of the digital content has begun and that they cannot exercise the right
+        of withdrawal.
+      </p>
+      <p>
+        This condition is separately confirmed by the User on the purchase screen; such confirmation carries legal validity.
+      </p>
+    </div>
 
-  <h2>7. Hizmet Değişiklikleri</h2>
-  <p>
-    Tarot Akademi; Uygulamanın herhangi bir özelliğini değiştirme, kısıtlama, askıya alma veya tamamen durdurma
-    hakkını önceden bildirim yapmaksızın saklı tutar. Uygulamanın belirli bir süre kesintisiz veya hatasız çalışacağına
-    dair herhangi bir taahhüt verilmemektedir.
-  </p>
-  <p>
-    Hizmet değişikliklerinden kaynaklanan veri kaybı veya kullanım kesintisi nedeniyle Tarot Akademi'ye karşı herhangi
-    bir tazminat talebinde bulunulamaz.
-  </p>
+    <h3 style="color:#D4AF37; margin-top:20px; margin-bottom:8px; font-size:1rem;">3.2 Premium Subscription</h3>
+    <ul>
+      <li>Premium subscription is activated from the time of purchase and is valid for the selected subscription period.</li>
+      <li>If cancelled before the subscription period ends, <strong>no pro-rata refund</strong> will be issued; the subscription will remain active until the cancellation date.</li>
+      <li>To disable auto-renewal, use the account settings in the App Store or Google Play.</li>
+    </ul>
 
-  <h2>8. Sorumluluk Sınırlaması</h2>
-  <p>
-    Yürürlükteki mevzuatın izin verdiği azami ölçüde; Tarot Akademi'nin Uygulamayla bağlantılı herhangi bir talep,
-    dava veya zarardan doğan toplam sorumluluğu, ilgili Kullanıcının son <strong>12 (on iki) ay</strong> içinde
-    Uygulamada gerçekleştirdiği toplam ödeme tutarıyla sınırlıdır.
-  </p>
-  <p>
-    Tarot Akademi, hiçbir koşulda; dolaylı, arızi, özel, cezai veya sonuçsal zararlar (kâr kaybı, veri kaybı,
-    itibar kaybı dahil) için sorumlu tutulamaz.
-  </p>
+    <h3 style="color:#D4AF37; margin-top:20px; margin-bottom:8px; font-size:1rem;">3.3 Refund Requests</h3>
+    <ul>
+      <li>Since purchases are processed via the App Store (Apple) or Google Play (Google), refund requests can only be evaluated under the respective store's refund policies.</li>
+      <li>Tarot Akademi does not have direct refund authority. For refund requests, please contact Apple Support or Google Play Support.</li>
+      <li>The User is deemed to have accepted these Terms and the refund policy upon confirming a purchase.</li>
+    </ul>
 
-  <h2>9. Uygulanacak Hukuk ve Yetki</h2>
-  <p>
-    Bu Koşullar, Türkiye Cumhuriyeti hukuku uyarınca yorumlanır ve uygulanır. Koşullardan doğabilecek her türlü
-    ihtilaf, anlaşmazlık veya talep; <strong>İstanbul</strong> mahkemelerinin münhasır yargı yetkisine tabidir.
-  </p>
+    <h2>4. Intellectual Property</h2>
+    <p>
+      All content in the Application (including tarot card images, astrology charts, written texts, design elements,
+      user interface, and source code) is owned by <strong>Tarot Akademi</strong> and protected by Turkish and
+      international intellectual property laws.
+    </p>
+    <p>
+      Users are prohibited from copying, reproducing, distributing, publishing, or commercially using this content
+      without the written permission of Tarot Akademi.
+    </p>
 
-  <h2>10. İletişim</h2>
-  <p>
-    Bu Koşullarla ilgili her türlü soru, talep veya geri bildirim için:
-  </p>
-  <ul>
-    <li><strong>E-posta:</strong> <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a></li>
-  </ul>
-  <p>
-    Kişisel verilerinizin nasıl işlendiği hakkında bilgi almak için <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
-    sayfamızı incelemenizi tavsiye ederiz.
-  </p>
+    <h2>5. Account and Security</h2>
+    <p>
+      The User is solely responsible for maintaining the confidentiality and security of their account credentials
+      (email and password). Sharing account credentials with unauthorized third parties is prohibited. If you suspect
+      unauthorized use of your account, please immediately notify us at
+      <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a>.
+    </p>
+    <p>
+      Tarot Akademi is not liable for data loss resulting from forgotten passwords or account security breaches.
+    </p>
 
-  <footer>
-    <p>&copy; 2025 Tarot Akademi. Tüm hakları saklıdır.</p>
-  </footer>
+    <h2>6. Prohibited Uses</h2>
+    <p>The User agrees not to:</p>
+    <ul>
+      <li>Reverse engineer, decompile, or disassemble the Application or its source code,</li>
+      <li>Copy, redistribute, or sell Application content for commercial purposes,</li>
+      <li>Perform actions that disrupt the normal functioning of the Application or harm its servers (DDoS, spam, bots, etc.),</li>
+      <li>Gain unauthorized access to other users' accounts or attempt to do so,</li>
+      <li>Use the Application for any purpose that violates applicable law.</li>
+    </ul>
+    <p>Accounts of users who violate these prohibitions may be suspended or permanently closed without notice.</p>
+
+    <h2>7. Service Changes</h2>
+    <p>
+      Tarot Akademi reserves the right to modify, restrict, suspend, or discontinue any feature of the Application
+      without prior notice. No commitment is made that the Application will operate without interruption or error
+      for any period.
+    </p>
+    <p>
+      No claim for damages may be made against Tarot Akademi for data loss or service interruption resulting from
+      service changes.
+    </p>
+
+    <h2>8. Limitation of Liability</h2>
+    <p>
+      To the maximum extent permitted by applicable law, Tarot Akademi's total liability arising from any claim,
+      lawsuit, or damage related to the Application is limited to the total amount paid by the relevant User in the
+      Application during the last <strong>12 (twelve) months</strong>.
+    </p>
+    <p>
+      Tarot Akademi is under no circumstances liable for indirect, incidental, special, punitive, or consequential
+      damages (including loss of profit, data loss, or reputational harm).
+    </p>
+
+    <h2>9. Governing Law and Jurisdiction</h2>
+    <p>
+      These Terms are interpreted and governed in accordance with the laws of the Republic of Turkey. Any dispute,
+      disagreement, or claim arising from the Terms is subject to the exclusive jurisdiction of the courts of
+      <strong>Istanbul</strong>.
+    </p>
+
+    <h2>10. Contact</h2>
+    <p>For any questions, requests, or feedback regarding these Terms:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a></li>
+    </ul>
+    <p>
+      For information on how your personal data is processed, we recommend reviewing our
+      <a href="gizlilik-politikasi.html">Privacy Policy</a> page.
+    </p>
+
+    <footer>
+      <p>&copy; 2025 Tarot Akademi. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <!-- Turkish Content -->
+  <div class="lang-tr" style="display:none" aria-hidden="true">
+    <header>
+      <h1>Kullanım Koşulları</h1>
+      <p>Tarot Akademi | Son güncellenme: 1 Ocak 2025</p>
+    </header>
+
+    <h2>1. Kabul</h2>
+    <p>
+      <strong>Tarot Akademi</strong> mobil uygulamasını ("Uygulama") App Store veya Google Play üzerinden indirerek,
+      kaydolarak veya herhangi bir şekilde kullanan her kişi ("Kullanıcı"), işbu Kullanım Koşullarını ("Koşullar")
+      okuduğunu, anladığını ve tüm hükümleriyle bağlı olmayı kabul ettiğini beyan eder.
+    </p>
+    <p>
+      Bu Koşulları kabul etmeyen kullanıcıların Uygulamayı indirmemesi, kullanmaması ve varsa hesabını kapatması
+      gerekmektedir. Uygulamayı kullanmaya devam etmek, Koşulların tümüyle kabul edildiği anlamına gelir.
+    </p>
+
+    <h2>2. Uygulamanın Niteliği ve Sorumluluk Reddi</h2>
+    <div class="highlight-box">
+      <p>
+        <strong>ÖNEMLİ UYARI:</strong> Tarot Akademi'nin sunduğu tüm içerikler — tarot açılımları, astroloji,
+        numeroloji, yıldız haritası, sinastri, karma bağı ve spiritüel rehberlik dahil olmak üzere — yalnızca
+        <strong>eğlence ve kişisel gelişim</strong> amacıyla sunulmaktadır.
+      </p>
+    </div>
+    <ul>
+      <li>Uygulama içeriğinin hiçbiri; tıbbi, psikolojik, hukuki, finansal veya herhangi bir mesleki tavsiye niteliği taşımaz. Bu tür konularda mutlaka yetkili uzmanlardan profesyonel destek alınmalıdır.</li>
+      <li>Yapay zeka tarafından üretilen veya algoritmik olarak oluşturulan içeriklerin kesinliği, doğruluğu ya da bütünlüğü hakkında herhangi bir garanti verilmemektedir. Kullanıcı, bu içeriklere dayanarak aldığı tüm kararların ve gerçekleştirdiği eylemlerin sorumluluğunu münferiden üstlenir.</li>
+      <li>Uygulama kullanımı sonucunda ortaya çıkan doğrudan veya dolaylı zarar, kayıp veya olumsuz sonuçlardan Tarot Akademi ve geliştiricileri hiçbir koşulda sorumlu tutulamaz.</li>
+      <li>Spiritüel içerikler birer yorum ve eğlence aracıdır; gelecek hakkında kehanet veya garanti niteliği taşımaz.</li>
+    </ul>
+
+    <h2>3. Ücretli İçerikler ve Satın Alma</h2>
+    <p>
+      Uygulama; <strong>"Yıldız Tozu"</strong> (tek kullanımlık dijital tüketim ürünü) ve <strong>Premium abonelik</strong>
+      olmak üzere iki farklı ücretli içerik türü sunmaktadır. Tüm satın alma işlemleri Apple App Store veya Google Play
+      altyapısı aracılığıyla gerçekleştirilmektedir.
+    </p>
+
+    <h3 style="color:#D4AF37; margin-top:20px; margin-bottom:8px; font-size:1rem;">3.1 Yıldız Tozu — Dijital Tüketim Ürünü ve Cayma Hakkının İstisnaları</h3>
+    <div class="highlight-box">
+      <p>
+        Yıldız Tozu, satın alma işleminin tamamlanmasıyla birlikte <strong>derhal kullanılabilir</strong> hale gelen
+        bir dijital tüketim ürünüdür. Bu nedenle:
+      </p>
+      <p>
+        6502 sayılı Tüketicinin Korunması Hakkında Kanun'un 48/5. maddesi ve Mesafeli Sözleşmeler Yönetmeliği'nin
+        15. maddesinin (ğ) bendi uyarınca; <strong>"dijital içeriğin ifasına başlanılmış olması"</strong> halinde
+        tüketicinin cayma hakkı sona ermektedir. Kullanıcı, satın alma işlemini onayladığı anda dijital içeriğin
+        ifasının başladığını ve bu nedenle cayma hakkını kullanamayacağını açıkça kabul eder.
+      </p>
+      <p>
+        Bu koşul, Kullanıcı tarafından satın alma ekranında ayrıca onaylanmaktadır; bu onay hukuki geçerlilik taşımaktadır.
+      </p>
+    </div>
+
+    <h3 style="color:#D4AF37; margin-top:20px; margin-bottom:8px; font-size:1rem;">3.2 Premium Abonelik</h3>
+    <ul>
+      <li>Premium abonelik, satın alma anından itibaren aktive edilir ve seçilen abonelik dönemi boyunca geçerlidir.</li>
+      <li>Abonelik süresi dolmadan iptal edilmesi halinde, kalan süreye karşılık gelen herhangi bir <strong>pro-rata iade yapılmaz</strong>; abonelik iptal tarihine kadar aktif kalmaya devam eder.</li>
+      <li>Otomatik yenileme özelliğini kapatmak için App Store veya Google Play hesap ayarlarının kullanılması gerekmektedir.</li>
+    </ul>
+
+    <h3 style="color:#D4AF37; margin-top:20px; margin-bottom:8px; font-size:1rem;">3.3 İade Talepleri</h3>
+    <ul>
+      <li>Satın alma işlemleri App Store (Apple) veya Google Play (Google) altyapısı üzerinden gerçekleştiğinden, iade talepleri yalnızca ilgili mağazanın iade politikaları çerçevesinde değerlendirilebilir.</li>
+      <li>Tarot Akademi'nin doğrudan iade yetkisi bulunmamaktadır. İade talepleriniz için Apple Destek veya Google Play Destek kanallarına başvurmanız gerekmektedir.</li>
+      <li>Kullanıcı, satın alma işlemini onayladığı anda işbu Koşulları ve iade politikasını kabul etmiş sayılır.</li>
+    </ul>
+
+    <h2>4. Fikri Mülkiyet</h2>
+    <p>
+      Uygulamada yer alan tüm içerikler (tarot kartı görselleri, astroloji şemaları, yazılı metinler, tasarım öğeleri,
+      kullanıcı arayüzü ve kaynak kodu dahil) <strong>Tarot Akademi</strong>'ye ait olup Türk ve uluslararası fikri
+      mülkiyet mevzuatıyla korunmaktadır.
+    </p>
+    <p>
+      Kullanıcıların bu içerikleri Tarot Akademi'nin yazılı izni olmaksızın kopyalaması, çoğaltması, dağıtması,
+      yayımlaması veya ticari amaçla kullanması yasaktır.
+    </p>
+
+    <h2>5. Hesap ve Güvenlik</h2>
+    <p>
+      Kullanıcı, hesap bilgilerinin (e-posta ve şifre) gizliliğini ve güvenliğini sağlamaktan münferiden sorumludur.
+      Hesap kimlik bilgilerinin yetkisiz üçüncü kişilerle paylaşılması yasaktır. Hesabınızın yetkisiz kullanımından
+      şüphelenmeniz halinde derhal <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a> adresine
+      bildirimde bulunmanız gerekmektedir.
+    </p>
+    <p>
+      Tarot Akademi; şifre unutma veya hesap güvenliği ihlalleri nedeniyle oluşabilecek veri kayıplarından sorumlu
+      tutulamaz.
+    </p>
+
+    <h2>6. Yasaklanan Kullanımlar</h2>
+    <p>Kullanıcı aşağıdaki eylemleri gerçekleştirmemeyi kabul eder:</p>
+    <ul>
+      <li>Uygulamayı veya kaynak kodunu tersine mühendislik (reverse engineering), decompile veya disassemble yoluyla inceleme,</li>
+      <li>Uygulama içeriğini ticari amaçla kopyalama, yeniden dağıtma veya satışa sunma,</li>
+      <li>Uygulamanın normal işleyişini bozacak ya da sunucularına zarar verecek eylemler gerçekleştirme (DDoS, spam, botlar vb.),</li>
+      <li>Başka kullanıcıların hesaplarına izinsiz erişim sağlama veya bu yönde girişimde bulunma,</li>
+      <li>Uygulamayı yürürlükteki herhangi bir yasayı ihlal eden amaçlarla kullanma.</li>
+    </ul>
+    <p>Bu yasaklara aykırı davranan kullanıcıların hesabı bildirim yapılmaksızın askıya alınabilir veya kalıcı olarak kapatılabilir.</p>
+
+    <h2>7. Hizmet Değişiklikleri</h2>
+    <p>
+      Tarot Akademi; Uygulamanın herhangi bir özelliğini değiştirme, kısıtlama, askıya alma veya tamamen durdurma
+      hakkını önceden bildirim yapmaksızın saklı tutar. Uygulamanın belirli bir süre kesintisiz veya hatasız çalışacağına
+      dair herhangi bir taahhüt verilmemektedir.
+    </p>
+    <p>
+      Hizmet değişikliklerinden kaynaklanan veri kaybı veya kullanım kesintisi nedeniyle Tarot Akademi'ye karşı herhangi
+      bir tazminat talebinde bulunulamaz.
+    </p>
+
+    <h2>8. Sorumluluk Sınırlaması</h2>
+    <p>
+      Yürürlükteki mevzuatın izin verdiği azami ölçüde; Tarot Akademi'nin Uygulamayla bağlantılı herhangi bir talep,
+      dava veya zarardan doğan toplam sorumluluğu, ilgili Kullanıcının son <strong>12 (on iki) ay</strong> içinde
+      Uygulamada gerçekleştirdiği toplam ödeme tutarıyla sınırlıdır.
+    </p>
+    <p>
+      Tarot Akademi, hiçbir koşulda; dolaylı, arızi, özel, cezai veya sonuçsal zararlar (kâr kaybı, veri kaybı,
+      itibar kaybı dahil) için sorumlu tutulamaz.
+    </p>
+
+    <h2>9. Uygulanacak Hukuk ve Yetki</h2>
+    <p>
+      Bu Koşullar, Türkiye Cumhuriyeti hukuku uyarınca yorumlanır ve uygulanır. Koşullardan doğabilecek her türlü
+      ihtilaf, anlaşmazlık veya talep; <strong>İstanbul</strong> mahkemelerinin münhasır yargı yetkisine tabidir.
+    </p>
+
+    <h2>10. İletişim</h2>
+    <p>
+      Bu Koşullarla ilgili her türlü soru, talep veya geri bildirim için:
+    </p>
+    <ul>
+      <li><strong>E-posta:</strong> <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a></li>
+    </ul>
+    <p>
+      Kişisel verilerinizin nasıl işlendiği hakkında bilgi almak için <a href="gizlilik-politikasi.html">Gizlilik Politikası</a>
+      sayfamızı incelemenizi tavsiye ederiz.
+    </p>
+
+    <footer>
+      <p>&copy; 2025 Tarot Akademi. Tüm hakları saklıdır.</p>
+    </footer>
+  </div>
 </div>
+<script>
+  function switchLang(lang) {
+    var metaDesc = document.querySelector('meta[name="description"]');
+    document.documentElement.lang = lang;
+    var enDiv = document.querySelector('.lang-en');
+    var trDiv = document.querySelector('.lang-tr');
+    var isEn = lang === 'en';
+    enDiv.style.display = isEn ? 'block' : 'none';
+    enDiv.setAttribute('aria-hidden', isEn ? 'false' : 'true');
+    trDiv.style.display = isEn ? 'none' : 'block';
+    trDiv.setAttribute('aria-hidden', isEn ? 'true' : 'false');
+    document.getElementById('btn-en').classList.toggle('active', isEn);
+    document.getElementById('btn-en').setAttribute('aria-pressed', isEn ? 'true' : 'false');
+    document.getElementById('btn-tr').classList.toggle('active', !isEn);
+    document.getElementById('btn-tr').setAttribute('aria-pressed', isEn ? 'false' : 'true');
+    if (isEn) {
+      document.title = 'Terms of Use — Tarot Akademi';
+      metaDesc.content = 'Terms of Use for Tarot Akademi mobile application.';
+    } else {
+      document.title = 'Kullanım Koşulları — Tarot Akademi';
+      metaDesc.content = 'Tarot Akademi mobil uygulaması Kullanım Koşulları.';
+    }
+  }
+</script>
 </body>
 </html>
