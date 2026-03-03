@@ -55,6 +55,7 @@
   <div class="lang-switcher">
     <button id="btn-en" class="active" aria-pressed="true" aria-label="Switch to English" onclick="switchLang('en')">EN</button>
     <button id="btn-tr" aria-pressed="false" aria-label="Türkçeye geç" onclick="switchLang('tr')">TR</button>
+    <button id="btn-es" aria-pressed="false" aria-label="Cambiar a español" onclick="switchLang('es')">ES</button>
   </div>
 
   <!-- English Content -->
@@ -429,6 +430,230 @@
       <p>&copy; 2025 Tarot Akademi. Tüm hakları saklıdır.</p>
     </footer>
   </div>
+
+  <!-- Spanish Content -->
+  <div class="lang-es" style="display:none" aria-hidden="true">
+    <header>
+      <h1>Política de Privacidad</h1>
+      <p>Tarot Akademi | Última actualización: 1 de enero de 2025</p>
+    </header>
+
+    <h2>1. Introducción</h2>
+    <p>
+      Esta Política de Privacidad ha sido preparada por <strong>Tarot Akademi</strong>, el desarrollador y operador de la
+      aplicación móvil <strong>Tarot Akademi</strong> ("Aplicación"). Explica cómo se recopilan, procesan, almacenan y protegen
+      los datos personales de las personas ("Usuario") que descargan, se registran o utilizan la Aplicación de cualquier forma.
+    </p>
+    <p>
+      Esta política ha sido preparada de conformidad con las normas y reglamentos internacionales de privacidad aplicables.
+      Al usar la Aplicación, usted acepta los términos establecidos en esta política.
+    </p>
+
+    <h2>2. Datos Recopilados</h2>
+    <p>La Aplicación puede recopilar los siguientes datos personales y técnicos:</p>
+    <ul>
+      <li><strong>Información de cuenta:</strong> Dirección de correo electrónico y nombre de usuario (mediante Firebase Authentication).</li>
+      <li><strong>ID de usuario anónimo:</strong> UID anónimo asignado por Firebase a usuarios no registrados por correo.</li>
+      <li><strong>Información de compra:</strong> Token IAP e identificador de producto para compras en la aplicación (procesado en Google Firestore). No recopilamos datos de tarjetas de pago ni bancarios.</li>
+      <li><strong>Datos de uso:</strong> Lecturas de tarot realizadas, saldo de polvo estelar e interacciones en la aplicación.</li>
+      <li><strong>Identificador publicitario:</strong> Identificador publicitario del dispositivo utilizado por Google AdMob (GAID en Android, IDFA en iOS). Solo se usa para publicidad personalizada y puede ser restablecido o desactivado por el usuario.</li>
+      <li><strong>Información del dispositivo y sistema:</strong> Versión del SO, idioma del dispositivo, versión de la aplicación. Utilizado para informes de errores y mejora de la aplicación.</li>
+      <li><strong>Caché local:</strong> Algunos datos pueden almacenarse localmente mediante SharedPreferences para mejorar el rendimiento. Estos datos no se transmiten a nuestros servidores.</li>
+    </ul>
+
+    <h2>3. Finalidad del Uso de Datos</h2>
+    <p>Los datos recopilados se procesan solo para los siguientes fines:</p>
+    <ul>
+      <li>Creación de cuentas de usuario y autenticación,</li>
+      <li>Activación y gestión de productos y suscripciones adquiridos,</li>
+      <li>Provisión de funciones de la aplicación (lecturas de tarot, herramientas astrológicas, contenido espiritual),</li>
+      <li>Visualización de anuncios en la aplicación (mediante AdMob),</li>
+      <li>Detección y corrección de errores técnicos y mejora de la calidad de la aplicación,</li>
+      <li>Atención de solicitudes de soporte al usuario,</li>
+      <li>Cumplimiento de obligaciones legales.</li>
+    </ul>
+    <p>Sus datos se procesan bajo las siguientes bases legales: <strong>Consentimiento</strong>, <strong>Ejecución de un contrato</strong>, <strong>Interés legítimo</strong> y <strong>Obligación legal</strong>.</p>
+
+    <h2>4. Compartición de Datos</h2>
+    <p>
+      Sus datos personales se comparten solo con los siguientes proveedores de servicios técnicos:
+    </p>
+    <ul>
+      <li><strong>Google Firebase (Firebase Authentication, Firestore):</strong> Para autenticación de usuarios y almacenamiento de datos. <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Política de privacidad de Firebase</a></li>
+      <li><strong>Google AdMob:</strong> Para publicidad. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Política de privacidad de Google</a></li>
+      <li><strong>Apple App Store / Google Play:</strong> Para compras en la aplicación.</li>
+    </ul>
+    <p>
+      Sus datos personales no se comparten con ninguna otra persona, institución u organización.
+      Sus datos nunca se venden, alquilan ni transfieren con fines comerciales.
+    </p>
+
+    <h2>5. Retención de Datos</h2>
+    <p>
+      Sus datos personales se conservan mientras su cuenta esté activa o continúe utilizando nuestros servicios.
+      Si elimina su cuenta o solicita la eliminación, sus datos se eliminarán permanentemente de nuestros sistemas en un
+      plazo de 30 días, salvo que la ley exija su conservación.
+    </p>
+    <p>
+      Los registros de compras pueden conservarse durante los períodos legalmente requeridos.
+    </p>
+
+    <h2>6. Derechos del Usuario</h2>
+    <p>Tiene los siguientes derechos sobre sus datos personales:</p>
+    <ul>
+      <li><strong>Acceso:</strong> Derecho a conocer si sus datos se están procesando y a solicitar una copia.</li>
+      <li><strong>Rectificación:</strong> Derecho a solicitar la corrección de datos inexactos o incompletos.</li>
+      <li><strong>Supresión ("Derecho al Olvido"):</strong> Derecho a solicitar la eliminación de sus datos personales en las condiciones aplicables.</li>
+      <li><strong>Portabilidad de datos:</strong> Derecho a recibir sus datos en un formato estructurado, de uso común y legible por máquina (RGPD Art. 20 / UK RGPD).</li>
+      <li><strong>Limitación del tratamiento:</strong> Derecho a solicitar que restrinjamos el tratamiento de sus datos en determinadas circunstancias.</li>
+      <li><strong>Oposición:</strong> Derecho a oponerse al tratamiento basado en intereses legítimos o para fines de marketing directo.</li>
+      <li><strong>Retirar el consentimiento:</strong> Puede retirar su consentimiento en cualquier momento sin afectar la legalidad del tratamiento previo.</li>
+      <li><strong>Decisiones automatizadas:</strong> Derecho a no ser objeto de decisiones basadas únicamente en el tratamiento automatizado.</li>
+      <li><strong>Indemnización / Daños y perjuicios:</strong> Derecho a reclamar compensación por daños causados por un tratamiento ilícito.</li>
+    </ul>
+    <p>
+      Para ejercer estos derechos, envíe un correo a <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a>. Responderemos en un plazo de <strong>30 días</strong>.
+    </p>
+
+    <h2>7. Privacidad de los Menores</h2>
+    <p>
+      Tarot Akademi no está dirigida a menores de 13 años. Si los padres o tutores detectan que su hijo ha proporcionado
+      dichos datos, contáctenos en
+      <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a>; los datos relevantes se eliminarán de inmediato.
+    </p>
+
+    <h2>8. Cookies y SDKs de Terceros</h2>
+    <p>
+      La aplicación puede almacenar datos localmente en el dispositivo para el almacenamiento en caché. Los siguientes
+      SDK de terceros están integrados:
+    </p>
+    <ul>
+      <li><strong>Firebase SDK:</strong> <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">https://firebase.google.com/support/privacy</a></li>
+      <li><strong>Google AdMob SDK:</strong> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></li>
+      <li><strong>Apple StoreKit / Google Play Billing:</strong> Se aplica la política de privacidad de la tienda correspondiente.</li>
+    </ul>
+
+    <h2>9. Cambios en la Política</h2>
+    <p>
+      Esta Política de Privacidad puede actualizarse periódicamente. Los cambios importantes se anunciarán dentro de la
+      aplicación o en esta página. El uso continuado de la aplicación tras la publicación de la política actualizada
+      constituye la aceptación de los cambios.
+    </p>
+
+    <h2>10. Contacto</h2>
+    <p>Para cualquier pregunta, solicitud o comentario sobre esta política:</p>
+    <ul>
+      <li><strong>Correo electrónico:</strong> <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a></li>
+    </ul>
+    <p>
+      También recomendamos revisar nuestra página de <a href="kullanim-kosullari.html">Términos de Uso</a>.
+    </p>
+
+    <h2>11. Transferencias Internacionales de Datos</h2>
+    <p>
+      Tarot Akademi opera desde Turquía. Sus datos pueden transferirse y procesarse en países fuera de su país de
+      residencia, incluidos los <strong>Estados Unidos</strong> (Google Firebase, Google AdMob).
+    </p>
+    <p>
+      <strong>Para usuarios en la UE y el Reino Unido:</strong> Las transferencias se realizan de conformidad con la
+      legislación de protección de datos aplicable, utilizando <strong>Cláusulas Contractuales Estándar (CCS)</strong>
+      o el equivalente del Reino Unido (IDTA).
+    </p>
+    <p>
+      <strong>Para usuarios en Australia:</strong> Las transferencias se realizan de conformidad con la
+      <strong>Ley de Privacidad de Australia de 1988</strong> y los Principios de Privacidad de Australia (APPs).
+    </p>
+    <p>
+      Al usar la aplicación, usted reconoce y acepta la transferencia de sus datos a estos países.
+    </p>
+
+    <h2>12. Residentes en la UE y el Reino Unido — Derechos adicionales</h2>
+    <p>
+      Si se encuentra en el <strong>Espacio Económico Europeo (EEE)</strong> o en el <strong>Reino Unido</strong>,
+      tiene derechos adicionales bajo el <strong>RGPD</strong> y el <strong>UK RGPD</strong>.
+    </p>
+    <p><strong>Bases jurídicas del tratamiento:</strong></p>
+    <ul>
+      <li><strong>Consentimiento</strong> — Para publicidad personalizada (AdMob) y funciones analíticas opcionales.</li>
+      <li><strong>Ejecución de un contrato</strong> — Para la creación de cuentas, autenticación y cumplimiento de compras.</li>
+      <li><strong>Intereses legítimos</strong> — Para informes de errores, mejora de la aplicación, prevención del fraude y seguridad.</li>
+      <li><strong>Obligación legal</strong> — Para conservar registros de compras e impuestos según la ley.</li>
+    </ul>
+    <p>
+      <strong>Autoridad supervisora:</strong> Si considera que no hemos gestionado sus datos de conformidad con el RGPD,
+      tiene derecho a presentar una reclamación ante la autoridad supervisora de su país de residencia. Lista de
+      autoridades supervisoras de la UE: <a href="https://edpb.europa.eu/" target="_blank" rel="noopener noreferrer">https://edpb.europa.eu/</a>.
+      Los residentes del Reino Unido pueden contactar con la <strong>Information Commissioner's Office (ICO)</strong>:
+      <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer">https://ico.org.uk/</a>.
+    </p>
+    <p>
+      <strong>Delegado de Protección de Datos (DPD):</strong> No hemos designado formalmente un DPD. Para consultas sobre
+      protección de datos, contáctenos en <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a>.
+    </p>
+
+    <h2>13. Residentes en California — Derechos CCPA / CPRA</h2>
+    <p>
+      Si es residente de <strong>California</strong>, la <strong>Ley de Privacidad del Consumidor de California (CCPA)</strong>
+      enmendada por la <strong>Ley de Derechos de Privacidad de California (CPRA)</strong> le otorga derechos adicionales.
+    </p>
+    <p><strong>Categorías de información personal que recopilamos:</strong></p>
+    <ul>
+      <li>Identificadores (dirección de correo electrónico, ID de usuario anónimo)</li>
+      <li>Información comercial (historial de compras en la aplicación)</li>
+      <li>Actividad en internet u otras redes electrónicas (datos de uso de la aplicación, interacciones de lectura de tarot)</li>
+      <li>Identificadores de dispositivo (ID publicitario / GAID / IDFA)</li>
+      <li>Inferencias derivadas de lo anterior para crear un perfil</li>
+    </ul>
+    <p><strong>Sus derechos en California:</strong></p>
+    <ul>
+      <li><strong>Derecho a saber:</strong> Puede solicitar que divulguemos las categorías y piezas específicas de información personal que hemos recopilado.</li>
+      <li><strong>Derecho a eliminar:</strong> Puede solicitar la eliminación de la información personal recopilada, sujeto a ciertas excepciones.</li>
+      <li><strong>Derecho a corregir:</strong> Puede solicitar la corrección de información personal inexacta.</li>
+      <li><strong>Derecho a optar por no participar en la venta o el intercambio:</strong> <strong>No vendemos</strong> su información personal. Sin embargo, compartimos su identificador publicitario con Google AdMob, lo que puede constituir "compartición" según la CPRA.</li>
+      <li><strong>Derecho a limitar el uso de información personal confidencial:</strong> No recopilamos información personal confidencial más allá de lo necesario para prestar el servicio.</li>
+      <li><strong>Derecho a no ser discriminado:</strong> No le discriminaremos por ejercer sus derechos CCPA/CPRA.</li>
+    </ul>
+    <p>
+      Para ejercer estos derechos, envíe un correo a <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a>
+      con el asunto "California Privacy Request". Responderemos en un plazo de <strong>45 días</strong>.
+    </p>
+
+    <h2>14. Residentes en el Reino Unido — Nota adicional</h2>
+    <p>
+      Sus datos se procesan de conformidad con el <strong>UK RGPD</strong> y la <strong>Ley de Protección de Datos de 2018</strong>.
+      Puede presentar una reclamación ante la <strong>ICO</strong>:
+      <a href="https://ico.org.uk/" target="_blank" rel="noopener noreferrer">https://ico.org.uk/</a> | Tel: 0303 123 1113.
+      Las transferencias internacionales de datos del Reino Unido utilizan el <strong>International Data Transfer Agreement (IDTA)</strong>
+      del Reino Unido donde sea aplicable.
+    </p>
+
+    <h2>15. Residentes en Australia — Ley de Privacidad de 1988</h2>
+    <p>
+      Su información personal se gestiona de conformidad con la <strong>Ley de Privacidad de 1988 (Cth)</strong> y los
+      <strong>Principios de Privacidad de Australia (APPs)</strong>.
+    </p>
+    <p><strong>Sus derechos según los APPs:</strong></p>
+    <ul>
+      <li><strong>Acceso:</strong> Puede solicitar acceso a la información personal que conservamos sobre usted.</li>
+      <li><strong>Corrección:</strong> Puede solicitar la corrección de información personal inexacta, desactualizada, incompleta, irrelevante o engañosa.</li>
+      <li><strong>Reclamaciones:</strong> Si tiene una queja, contáctenos primero en <a href="mailto:corelogiclabs@outlook.com">corelogiclabs@outlook.com</a>.
+        Si no está satisfecho con nuestra respuesta, puede presentar una reclamación ante la <strong>OAIC</strong>:
+        <ul>
+          <li>Sitio web: <a href="https://www.oaic.gov.au/" target="_blank" rel="noopener noreferrer">https://www.oaic.gov.au/</a></li>
+          <li>Tel: 1300 363 992</li>
+        </ul>
+      </li>
+    </ul>
+    <p>
+      <strong>Divulgación en el extranjero:</strong> Divulgamos información personal a destinatarios en el extranjero
+      (Google Firebase y AdMob, en EE. UU.). Tomamos medidas razonables para garantizar que estos destinatarios gestionen
+      sus datos de forma coherente con los APPs.
+    </p>
+
+    <footer>
+      <p>&copy; 2025 Tarot Akademi. Todos los derechos reservados.</p>
+    </footer>
+  </div>
 </div>
 <script>
   function switchLang(lang) {
@@ -436,21 +661,28 @@
     document.documentElement.lang = lang;
     var enDiv = document.querySelector('.lang-en');
     var trDiv = document.querySelector('.lang-tr');
-    var isEn = lang === 'en';
-    enDiv.style.display = isEn ? 'block' : 'none';
-    enDiv.setAttribute('aria-hidden', isEn ? 'false' : 'true');
-    trDiv.style.display = isEn ? 'none' : 'block';
-    trDiv.setAttribute('aria-hidden', isEn ? 'true' : 'false');
-    document.getElementById('btn-en').classList.toggle('active', isEn);
-    document.getElementById('btn-en').setAttribute('aria-pressed', isEn ? 'true' : 'false');
-    document.getElementById('btn-tr').classList.toggle('active', !isEn);
-    document.getElementById('btn-tr').setAttribute('aria-pressed', isEn ? 'false' : 'true');
-    if (isEn) {
+    var esDiv = document.querySelector('.lang-es');
+    enDiv.style.display = lang === 'en' ? 'block' : 'none';
+    enDiv.setAttribute('aria-hidden', lang === 'en' ? 'false' : 'true');
+    trDiv.style.display = lang === 'tr' ? 'block' : 'none';
+    trDiv.setAttribute('aria-hidden', lang === 'tr' ? 'false' : 'true');
+    esDiv.style.display = lang === 'es' ? 'block' : 'none';
+    esDiv.setAttribute('aria-hidden', lang === 'es' ? 'false' : 'true');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+    document.getElementById('btn-tr').classList.toggle('active', lang === 'tr');
+    document.getElementById('btn-tr').setAttribute('aria-pressed', lang === 'tr' ? 'true' : 'false');
+    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    document.getElementById('btn-es').setAttribute('aria-pressed', lang === 'es' ? 'true' : 'false');
+    if (lang === 'en') {
       document.title = 'Privacy Policy — Tarot Akademi';
       metaDesc.content = 'Privacy Policy for Tarot Akademi mobile application.';
-    } else {
+    } else if (lang === 'tr') {
       document.title = 'Gizlilik Politikası — Tarot Akademi';
       metaDesc.content = 'Tarot Akademi mobil uygulaması Gizlilik Politikası.';
+    } else if (lang === 'es') {
+      document.title = 'Política de Privacidad — Tarot Akademi';
+      metaDesc.content = 'Política de Privacidad de la aplicación móvil Tarot Akademi.';
     }
   }
 </script>
